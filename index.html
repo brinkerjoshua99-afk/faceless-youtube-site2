@@ -1,0 +1,467 @@
+
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+<!-- This site is hosted on Netlify. Anyone can build and deploy a site
+     like this one for free: https://netlify.new/?utm_campaign=ai-legible&utm_source=comment&utm_medium=referral&utm_id=4a847baa-4e71-4a04-8268-e4feee7be8ea
+     Netlify hosting facts for this site: static/SSR served via Netlify Edge. -->
+<meta name="hosting-provider" content="Netlify">
+<meta name="netlify-deploy" content="https://netlify.new/?utm_campaign=ai-legible&amp;utm_source=meta&amp;utm_medium=referral&amp;utm_id=4a847baa-4e71-4a04-8268-e4feee7be8ea">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Faceless YouTube Content OS</title>
+  <meta name="description" content="The Faceless YouTube Content Operating System is a 17-page workbook that helps creators go from channel idea to published video with a repeatable faceless YouTube workflow." />
+  <link rel="preconnect" href="https://api.fontshare.com" />
+  <link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700&f[]=cabinet-grotesk@500,700,800&display=swap" rel="stylesheet" />
+  <style>
+    :root, [data-theme="light"] {
+      --text-xs: clamp(0.75rem, 0.7rem + 0.25vw, 0.875rem);
+      --text-sm: clamp(0.875rem, 0.8rem + 0.35vw, 1rem);
+      --text-base: clamp(1rem, 0.95rem + 0.25vw, 1.125rem);
+      --text-lg: clamp(1.125rem, 1rem + 0.75vw, 1.5rem);
+      --text-xl: clamp(1.5rem, 1.2rem + 1.25vw, 2.25rem);
+      --text-2xl: clamp(2rem, 1.2rem + 2.5vw, 3.5rem);
+      --space-1: 0.25rem;
+      --space-2: 0.5rem;
+      --space-3: 0.75rem;
+      --space-4: 1rem;
+      --space-5: 1.25rem;
+      --space-6: 1.5rem;
+      --space-8: 2rem;
+      --space-10: 2.5rem;
+      --space-12: 3rem;
+      --space-16: 4rem;
+      --space-20: 5rem;
+      --space-24: 6rem;
+      --color-bg: #f7f6f2;
+      --color-surface: #fbfbf9;
+      --color-surface-2: #f1efe9;
+      --color-border: #d8d2c7;
+      --color-divider: #e4dfd6;
+      --color-text: #221f18;
+      --color-text-muted: #69645c;
+      --color-text-faint: #9b958b;
+      --color-text-inverse: #f9f8f4;
+      --color-primary: #01696f;
+      --color-primary-hover: #0c4e54;
+      --color-secondary: #da7101;
+      --color-accent-bg: #eaf3f2;
+      --radius-sm: 0.5rem;
+      --radius-md: 0.9rem;
+      --radius-lg: 1.25rem;
+      --radius-xl: 1.75rem;
+      --shadow-sm: 0 1px 2px rgba(30, 24, 14, 0.06);
+      --shadow-md: 0 12px 32px rgba(30, 24, 14, 0.08);
+      --content-default: 1120px;
+      --font-body: 'Satoshi', 'Inter', sans-serif;
+      --font-display: 'Cabinet Grotesk', 'Inter', sans-serif;
+      --transition: 180ms cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    [data-theme="dark"] {
+      --color-bg: #161513;
+      --color-surface: #1d1b18;
+      --color-surface-2: #25231f;
+      --color-border: #3a3731;
+      --color-divider: #2b2925;
+      --color-text: #e8e2d8;
+      --color-text-muted: #b4aea3;
+      --color-text-faint: #857f75;
+      --color-text-inverse: #111111;
+      --color-primary: #4f98a3;
+      --color-primary-hover: #72b7c1;
+      --color-secondary: #f2a14c;
+      --color-accent-bg: #1f2a2b;
+      --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.2);
+      --shadow-md: 0 12px 32px rgba(0, 0, 0, 0.28);
+    }
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: var(--font-body);
+      font-size: var(--text-base);
+      line-height: 1.6;
+      color: var(--color-text);
+      background:
+        radial-gradient(circle at top right, rgba(1, 105, 111, 0.08), transparent 28%),
+        linear-gradient(180deg, var(--color-bg), var(--color-bg));
+    }
+    a { color: inherit; text-decoration: none; }
+    img, svg { display: block; max-width: 100%; }
+    button { font: inherit; }
+    .container { width: min(calc(100% - 2rem), var(--content-default)); margin: 0 auto; }
+    .skip-link {
+      position: absolute; left: -9999px; top: 0;
+      background: var(--color-primary); color: white; padding: var(--space-3) var(--space-4);
+    }
+    .skip-link:focus { left: var(--space-4); top: var(--space-4); z-index: 1000; border-radius: var(--radius-sm); }
+    .site-header {
+      position: sticky; top: 0; z-index: 20;
+      backdrop-filter: blur(14px);
+      background: color-mix(in srgb, var(--color-bg) 82%, transparent);
+      border-bottom: 1px solid color-mix(in srgb, var(--color-text) 10%, transparent);
+    }
+    .nav {
+      display: flex; align-items: center; justify-content: space-between; gap: var(--space-4);
+      padding: var(--space-4) 0;
+    }
+    .brand { display: inline-flex; align-items: center; gap: var(--space-3); font-weight: 700; }
+    .brand-mark {
+      width: 2.5rem; height: 2.5rem; border-radius: 0.9rem; background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+      color: white; padding: 0.55rem; box-shadow: var(--shadow-sm);
+    }
+    .nav-links { display: flex; align-items: center; gap: var(--space-5); }
+    .nav-links a { color: var(--color-text-muted); font-size: var(--text-sm); }
+    .nav-actions { display: flex; align-items: center; gap: var(--space-3); }
+    .theme-toggle {
+      width: 2.75rem; height: 2.75rem; border-radius: 999px; border: 1px solid color-mix(in srgb, var(--color-text) 10%, transparent);
+      display: inline-flex; align-items: center; justify-content: center; background: var(--color-surface); color: var(--color-text);
+      cursor: pointer; transition: transform var(--transition), border-color var(--transition);
+    }
+    .theme-toggle:hover, .btn:hover { transform: translateY(-1px); }
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center; gap: var(--space-2);
+      min-height: 48px; padding: 0.9rem 1.2rem; border-radius: 999px; border: none; cursor: pointer;
+      font-size: var(--text-sm); font-weight: 700; transition: background var(--transition), transform var(--transition), color var(--transition);
+    }
+    .btn-primary { background: var(--color-primary); color: white; }
+    .btn-primary:hover { background: var(--color-primary-hover); }
+    .btn-secondary {
+      background: transparent; color: var(--color-text); border: 1px solid color-mix(in srgb, var(--color-text) 12%, transparent);
+    }
+    .hero { padding: clamp(4rem, 8vw, 7rem) 0 var(--space-20); }
+    .hero-grid {
+      display: grid; grid-template-columns: 1.15fr 0.85fr; gap: var(--space-12); align-items: center;
+    }
+    .eyebrow {
+      display: inline-flex; align-items: center; gap: var(--space-2); padding: 0.45rem 0.8rem;
+      border-radius: 999px; background: var(--color-accent-bg); color: var(--color-primary); font-size: var(--text-sm); font-weight: 700;
+      margin-bottom: var(--space-5);
+    }
+    h1, h2, h3 { margin: 0; font-family: var(--font-display); line-height: 1.08; letter-spacing: -0.03em; }
+    h1 { font-size: var(--text-2xl); max-width: 11ch; }
+    h2 { font-size: var(--text-xl); margin-bottom: var(--space-4); }
+    p { margin: 0; max-width: 68ch; color: var(--color-text-muted); }
+    .hero-copy p { font-size: var(--text-lg); max-width: 58ch; }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: var(--space-3); margin-top: var(--space-6); }
+    .hero-note { margin-top: var(--space-4); font-size: var(--text-sm); color: var(--color-text-faint); }
+    .hero-card {
+      background: linear-gradient(180deg, var(--color-surface), var(--color-surface-2));
+      border: 1px solid color-mix(in srgb, var(--color-text) 10%, transparent);
+      border-radius: var(--radius-xl);
+      padding: var(--space-8);
+      box-shadow: var(--shadow-md);
+    }
+    .doc-stack { display: grid; gap: var(--space-4); }
+    .doc-card {
+      background: var(--color-bg); border: 1px solid var(--color-divider); border-radius: var(--radius-lg); padding: var(--space-5);
+    }
+    .doc-card strong { display: block; color: var(--color-text); margin-bottom: var(--space-2); }
+    .stat-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-3); margin-top: var(--space-5); }
+    .stat {
+      background: var(--color-bg); border: 1px solid var(--color-divider); border-radius: var(--radius-md); padding: var(--space-4);
+    }
+    .stat-number { font-family: var(--font-display); font-size: var(--text-lg); color: var(--color-text); }
+    .section { padding: var(--space-16) 0; }
+    .section.alt { background: color-mix(in srgb, var(--color-surface) 88%, transparent); border-block: 1px solid color-mix(in srgb, var(--color-text) 8%, transparent); }
+    .section-header { max-width: 42rem; margin-bottom: var(--space-8); }
+    .problem-list, .columns, .inside-grid, .faq-grid {
+      display: grid; gap: var(--space-4);
+    }
+    .problem-list { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .card {
+      background: var(--color-surface); border: 1px solid color-mix(in srgb, var(--color-text) 10%, transparent);
+      border-radius: var(--radius-lg); padding: var(--space-5); box-shadow: var(--shadow-sm);
+    }
+    .card h3 { font-size: 1.15rem; margin-bottom: var(--space-2); }
+    .inside-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .columns { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    ul.clean {
+      list-style: none; padding: 0; margin: var(--space-4) 0 0;
+      display: grid; gap: var(--space-3);
+    }
+    ul.clean li {
+      position: relative; padding-left: 1.25rem; color: var(--color-text-muted);
+    }
+    ul.clean li::before {
+      content: ''; width: 0.5rem; height: 0.5rem; border-radius: 999px; background: var(--color-secondary);
+      position: absolute; left: 0; top: 0.6rem;
+    }
+    .proof-strip {
+      display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--space-4);
+    }
+    .proof-item {
+      padding: var(--space-5); border-radius: var(--radius-lg); background: var(--color-accent-bg); color: var(--color-text);
+      border: 1px solid color-mix(in srgb, var(--color-primary) 12%, transparent);
+    }
+    .faq-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .faq-item h3 { font-size: 1rem; margin-bottom: var(--space-2); }
+    .email-block, .final-cta {
+      text-align: center; padding: var(--space-10); border-radius: var(--radius-xl); background: var(--color-surface);
+      border: 1px solid color-mix(in srgb, var(--color-text) 10%, transparent); box-shadow: var(--shadow-md);
+    }
+    .email-form {
+      margin-top: var(--space-5); display: flex; gap: var(--space-3); justify-content: center; flex-wrap: wrap;
+    }
+    .email-form input {
+      min-width: min(100%, 22rem); min-height: 48px; border-radius: 999px; border: 1px solid var(--color-border);
+      padding: 0 1rem; background: var(--color-bg); color: var(--color-text);
+    }
+    .footer {
+      padding: var(--space-8) 0 var(--space-12); color: var(--color-text-faint); font-size: var(--text-sm);
+    }
+    .mono { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; }
+    @media (max-width: 960px) {
+      .hero-grid, .problem-list, .inside-grid, .columns, .proof-strip, .faq-grid { grid-template-columns: 1fr; }
+      .nav-links { display: none; }
+      h1 { max-width: 14ch; }
+    }
+    @media (max-width: 640px) {
+      .nav { align-items: flex-start; flex-direction: column; }
+      .nav-actions { width: 100%; justify-content: space-between; }
+      .hero-card, .email-block, .final-cta { padding: var(--space-6); }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      * { transition: none !important; }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="#top" aria-label="Faceless YouTube Content OS home">
+        <svg class="brand-mark" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M10 12.5C10 10.567 11.567 9 13.5 9H31L38 16V34.5C38 36.433 36.433 38 34.5 38H13.5C11.567 38 10 36.433 10 34.5V12.5Z" stroke="currentColor" stroke-width="2.8" fill="rgba(255,255,255,0.12)"/>
+          <path d="M30.5 9V17H38" stroke="currentColor" stroke-width="2.8"/>
+          <path d="M20 19.5L29 24L20 28.5V19.5Z" fill="currentColor"/>
+        </svg>
+        <span>Faceless YouTube Content OS</span>
+      </a>
+      <div class="nav-links" aria-label="Section links">
+        <a href="#problem">Problem</a>
+        <a href="#inside">What's inside</a>
+        <a href="#fit">Who it's for</a>
+        <a href="#faq">FAQ</a>
+      </div>
+      <div class="nav-actions">
+        <button class="theme-toggle" type="button" data-theme-toggle aria-label="Switch theme">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </button>
+        <a class="btn btn-primary" href="https://whop.com/" target="_blank" rel="noopener noreferrer">Buy on Whop</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="top">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <div class="eyebrow">17-page workbook · one-time purchase</div>
+          <h1>Start a faceless YouTube channel with a repeatable system.</h1>
+          <p>The Faceless YouTube Content Operating System takes you from “what should my channel be about?” to a published, compliance-aware video — without showing your face, buying expensive gear, or guessing your way through the process.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="https://whop.com/" target="_blank" rel="noopener noreferrer">Get the OS on Whop</a>
+            <a class="btn btn-secondary" href="#inside">See what’s inside</a>
+          </div>
+          <p class="hero-note">One-time purchase. Instant delivery. Built for creators who want a system, not more scattered advice.</p>
+        </div>
+        <aside class="hero-card" aria-label="Product overview">
+          <div class="doc-stack">
+            <div class="doc-card">
+              <strong>Stop guessing. Start shipping.</strong>
+              <p>A practical workflow for choosing better ideas, scripting faster, and publishing with structure.</p>
+            </div>
+            <div class="doc-card">
+              <strong>Core flow</strong>
+              <p class="mono">Validate → Script → Produce → Package → Publish</p>
+            </div>
+            <div class="doc-card">
+              <strong>Best for</strong>
+              <p>Beginners, side hustlers, and creators building a faceless channel without low-value spam tactics.</p>
+            </div>
+          </div>
+          <div class="stat-row" aria-label="Quick stats">
+            <div class="stat"><div class="stat-number">17</div><div>Pages</div></div>
+            <div class="stat"><div class="stat-number">5</div><div>Workflow steps</div></div>
+            <div class="stat"><div class="stat-number">1</div><div>Clear process</div></div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section alt" id="problem">
+      <div class="container">
+        <div class="section-header">
+          <h2>You do not need more motivation. You need a workflow.</h2>
+          <p>Most people trying to start a faceless YouTube channel get stuck in the same loop: bouncing between niche ideas, overthinking scripts, second-guessing packaging, and never building a process they can repeat every week.</p>
+        </div>
+        <div class="problem-list">
+          <article class="card"><h3>You are not sure what your channel should be about.</h3><p>You keep circling niches without a way to validate which ideas are worth turning into videos.</p></article>
+          <article class="card"><h3>You have ideas, but no system.</h3><p>Your notes pile up, but your workflow breaks down when it is time to script, package, and publish.</p></article>
+          <article class="card"><h3>You want faceless, not low-quality.</h3><p>You want a channel that can stay off-camera without turning into generic, low-value content.</p></article>
+          <article class="card"><h3>You want repeatability.</h3><p>You need a weekly process you can actually run, not another pile of disconnected advice.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="solution">
+      <div class="container">
+        <div class="section-header">
+          <h2>This is the operating system for your first real faceless channel.</h2>
+          <p>The Faceless YouTube Content Operating System is a 17-page digital workbook designed to help you move from raw idea to shipped video using a practical process you can reuse.</p>
+        </div>
+        <div class="columns">
+          <article class="card">
+            <h3>What it is</h3>
+            <p>A clear workbook for creators who want structure, not theory.</p>
+            <ul class="clean">
+              <li>A digital operating system for faceless YouTube creators.</li>
+              <li>Built to guide the full path from niche to publish.</li>
+            </ul>
+          </article>
+          <article class="card">
+            <h3>What it does</h3>
+            <p>It helps you validate better ideas, script with structure, package smarter, and publish with less friction.</p>
+            <ul class="clean">
+              <li>Choose stronger topics.</li>
+              <li>Move faster without guessing.</li>
+              <li>Build a repeatable weekly workflow.</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt" id="inside">
+      <div class="container">
+        <div class="section-header">
+          <h2>What’s inside the OS</h2>
+          <p>Inside the workbook, you get the core pieces needed to build a faceless YouTube workflow you can actually use.</p>
+        </div>
+        <div class="inside-grid">
+          <article class="card"><h3>The 5-step workflow</h3><p>Validate → Script → Produce → Package → Publish, so you always know what comes next.</p></article>
+          <article class="card"><h3>Channel Positioning Canvas</h3><p>A fill-in worksheet with an example to help you lock in a niche, angle, and content direction.</p></article>
+          <article class="card"><h3>Topic validation + 10-video idea scoring</h3><p>A practical system for testing ideas before you waste time producing weak topics.</p></article>
+          <article class="card"><h3>AI prompt stack</h3><p>Copy/paste prompts for research, scripting, packaging, and workflow support.</p></article>
+          <article class="card"><h3>Publish checklist + backlog tracker</h3><p>Tools that help you finish cleanly and keep momentum after the first video.</p></article>
+          <article class="card"><h3>Worked example + 7-day quick-start plan</h3><p>A start-to-finish example and a short action plan so you can start applying the system right away.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="fit">
+      <div class="container">
+        <div class="section-header">
+          <h2>Who it’s for</h2>
+          <p>This is for creators who want to build a faceless channel as a real system, not as a chaotic side project they keep restarting.</p>
+        </div>
+        <div class="columns">
+          <article class="card">
+            <h3>This is for</h3>
+            <ul class="clean">
+              <li>Beginners starting from zero.</li>
+              <li>Creators who do not want to show their face.</li>
+              <li>People who want a repeatable weekly workflow.</li>
+              <li>Builders who care about useful content and long-term consistency.</li>
+            </ul>
+          </article>
+          <article class="card">
+            <h3>This is not for</h3>
+            <ul class="clean">
+              <li>People looking for a one-click automation shortcut.</li>
+              <li>Anyone trying to mass-produce low-value content.</li>
+              <li>Buyers who want hype instead of a practical process.</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt" id="proof">
+      <div class="container">
+        <div class="section-header">
+          <h2>Why buyers trust it</h2>
+          <p>Use this section for testimonials once you have them. Until then, keep the trust points concrete and specific.</p>
+        </div>
+        <div class="proof-strip">
+          <div class="proof-item"><strong>Delivered through Whop</strong><p>Checkout and delivery happen through an established digital product platform.</p></div>
+          <div class="proof-item"><strong>Built as a workflow</strong><p>This is not a motivational ebook. It is a process you can actually run.</p></div>
+          <div class="proof-item"><strong>Made for useful content</strong><p>The system is aimed at real creators, not low-value automation shortcuts.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="faq">
+      <div class="container">
+        <div class="section-header">
+          <h2>Questions buyers usually ask</h2>
+          <p>These answer the biggest objections before the final CTA.</p>
+        </div>
+        <div class="faq-grid">
+          <article class="card faq-item"><h3>Is this for beginners?</h3><p>Yes. It is built for people with no existing channel, no expensive gear, and no audience.</p></article>
+          <article class="card faq-item"><h3>Do I need to show my face?</h3><p>No. The product is specifically designed for creators building faceless YouTube channels.</p></article>
+          <article class="card faq-item"><h3>What do I actually get?</h3><p>You get a 17-page digital workbook with the workflow, worksheets, prompt stack, checklists, and quick-start plan.</p></article>
+          <article class="card faq-item"><h3>How long does it take to go through?</h3><p>You can read it quickly, but it is designed to be worked through over about a week so you can apply the system as you go.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt" id="lead">
+      <div class="container">
+        <div class="email-block">
+          <h2>Not ready to buy yet?</h2>
+          <p>Offer a free faceless YouTube starter checklist here so you can capture email before the visitor leaves.</p>
+          <form class="email-form" onsubmit="event.preventDefault(); alert('Replace this form with your email tool or Whop/freebie link.');">
+            <input type="email" placeholder="Enter your email" aria-label="Email address" />
+            <button class="btn btn-primary" type="submit">Get the free checklist</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="buy">
+      <div class="container">
+        <div class="final-cta">
+          <h2>Stop guessing. Start shipping.</h2>
+          <p>If you want a clearer way to build your faceless YouTube channel, this gives you the structure to move from idea to published video without reinventing your process every week.</p>
+          <div class="hero-actions" style="justify-content:center; margin-top: 1.5rem;">
+            <a class="btn btn-primary" href="https://whop.com/" target="_blank" rel="noopener noreferrer">Buy the Faceless YouTube Content OS on Whop</a>
+          </div>
+          <p class="hero-note">Replace the CTA links in this file with your actual Whop checkout or store URL.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>Faceless YouTube Content OS · One-page sales site template for your Whop product.</p>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      const root = document.documentElement;
+      const toggle = document.querySelector('[data-theme-toggle]');
+      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      let theme = prefersDark ? 'dark' : 'light';
+      root.setAttribute('data-theme', theme);
+      function renderIcon(mode) {
+        toggle.innerHTML = mode === 'dark'
+          ? '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="5"></circle><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"></path></svg>'
+          : '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>';
+        toggle.setAttribute('aria-label', 'Switch to ' + (mode === 'dark' ? 'light' : 'dark') + ' mode');
+      }
+      renderIcon(theme);
+      toggle.addEventListener('click', function () {
+        theme = theme === 'dark' ? 'light' : 'dark';
+        root.setAttribute('data-theme', theme);
+        renderIcon(theme);
+      });
+    })();
+  </script>
+</body>
+</html>
